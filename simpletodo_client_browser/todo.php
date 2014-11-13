@@ -2,7 +2,7 @@
 session_start();
 include_once 'apicaller.php';
 
-$apicaller = new ApiCaller('APP001', '28e336ac6c9423d946ba02d19c6a2632', 'http://sha-net.net/java-test/');
+$apicaller = new ApiCaller('APP001', '28e336ac6c9423d946ba02d19c6a2632', 'http://sha-net.net/simpletodo_client_brwoser/');
 
 $todo_items = $apicaller->sendRequest(array(
 	'controller' => 'todo',
