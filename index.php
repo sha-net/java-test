@@ -16,7 +16,19 @@ if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}
 $request_body = file_get_contents('php://input');
 $json = json_decode($request_body);
 print_r($json);
-echo($json[0]);
-echo($json['ID']);
-if($json["ID"] == "3450"){echo "Now it is Ok";}
+
+
+#################### Functions #######################
+function getFromDB(){
+	$dbconn = pg_connect("host=localhost dbname=apiDB user=apiDB password=apiDB")
+	    or die('Could not connect: ' . pg_last_error());
+	// Performing SQL query
+	$query = 'SELECT * FROM authors';
+	$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+	// Free resultset
+	pg_free_result($result);	
+	// Closing connection
+	pg_close($dbconn);
+}
+
 ?>
