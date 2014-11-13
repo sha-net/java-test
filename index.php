@@ -29,7 +29,6 @@ function getFromDB(){
 	$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 	$data = pg_fetch_array($result, NULL, PGSQL_ASSOC);
 	print_r($data);
-	echo($data);
 	// Free resultset
 	pg_free_result($result);	
 	// Closing connection
