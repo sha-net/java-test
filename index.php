@@ -27,6 +27,7 @@ function getFromDB(){
 	$query = 'SELECT * FROM book';
 	$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 	print_r($result);
+	echo($result);
 	// Free resultset
 	pg_free_result($result);	
 	// Closing connection
