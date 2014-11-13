@@ -16,4 +16,5 @@ if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}
 $request_body = file_get_contents('php://input');
 $json = json_decode($request_body);
 print_r($json);
+if($json["ID"] == "3450"){echo "Now it is Ok";}
 ?>
