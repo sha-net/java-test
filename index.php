@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	}else{
 		echo "sdfsdf";
 	}
+	getFromDB();
 }
 if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}
 $request_body = file_get_contents('php://input');
@@ -23,12 +24,14 @@ function getFromDB(){
 	$dbconn = pg_connect("host=localhost dbname=apiDB user=apiDB password=apiDB")
 	    or die('Could not connect: ' . pg_last_error());
 	// Performing SQL query
-	$query = 'SELECT * FROM authors';
+	$query = 'SELECT * FROM book';
 	$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+	print_r($result);
 	// Free resultset
 	pg_free_result($result);	
 	// Closing connection
 	pg_close($dbconn);
+	
 }
 
 ?>
