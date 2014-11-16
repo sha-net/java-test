@@ -1,4 +1,6 @@
 <?php
+$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+$arr1 = "asfsdfasfadsfasfdasdfjfjfjjfjfjfjfjfjfjfjfjfjfjfjfjfjflsakjflakjflkadj";
 
 function iDontKnow(){
 echo "Now i dont know - Start";
