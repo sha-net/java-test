@@ -1,4 +1,11 @@
 <?php
+echo "Now i dont know - Start";
+$request_body = file_get_contents('php://input');
+$json = json_decode($request_body);
+print_r($json);
+print_r($arr);
+echo "Now i dont know - Finish";
+
 function getFromDB(){
 	$dbconn = pg_connect("host=localhost dbname=apiDB user=apiDB password=apiDB")
 	    or die('Could not connect: ' . pg_last_error());
