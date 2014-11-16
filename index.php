@@ -1,11 +1,11 @@
 <?php
-echo "version 0002";
+echo "version 0003";
 //include 'index-faunctions.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
-if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET";verifyGetRequest("3450");}
+if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET";verifyGetRequest();}
 if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}
 
 $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
@@ -34,8 +34,8 @@ function getFromDB(){
 	pg_close($dbconn);	
 }
 
-function verifyGetRequest($id){
-	if($_GET["ID"] == $id){
+function verifyGetRequest(){
+	if($_GET["ID"] == "3450"){
 		echo "If";
 		echo json_encode($arr);
 		echo "OK";
