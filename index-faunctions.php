@@ -30,6 +30,7 @@ function verifyGetRequest($id){
 		echo "OK";
 		print_r($arr);
 		iDontKnow();
+		echo $arr1;
 	}else{
 		echo "Else";
 	}
