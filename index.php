@@ -1,11 +1,11 @@
 <?php
-echo "version 0003";
+echo "version 0004";
 //include 'index-faunctions.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
-if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET";verifyGetRequest();}
+if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET"; verifyGetRequest();getFromDB();}
 if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}
 
 $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
@@ -41,7 +41,7 @@ function verifyGetRequest(){
 		echo "OK";
 		print_r($arr);
 		iDontKnow();
-		echo $GLOBALS['$arr1'];
+		echo '$arr1';
 	}else{
 		echo "Else";
 	}
