@@ -41,7 +41,7 @@ function verifyGetRequest(){
 		echo "OK";
 		print_r($arr);
 		iDontKnow();
-		echo $arr1;
+		echo $GLOBALS['$arr1'];
 	}else{
 		echo "Else";
 	}
