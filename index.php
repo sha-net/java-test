@@ -1,5 +1,5 @@
 <?php
-require('index-faunctions.php');
+require_once('index-faunctions.php');
 
 $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";}
