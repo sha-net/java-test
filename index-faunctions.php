@@ -1,3 +1,4 @@
+<?php
 function getFromDB(){
 	$dbconn = pg_connect("host=localhost dbname=apiDB user=apiDB password=apiDB")
 	    or die('Could not connect: ' . pg_last_error());
@@ -22,3 +23,4 @@ function verifyGetRequest($id){
 		echo "Else";
 	}
 }
+?>
