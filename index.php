@@ -1,5 +1,5 @@
 <?php
-
+require('index-faunctions.php');
 
 $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";}
@@ -13,5 +13,5 @@ $json = json_decode($request_body);
 print_r($json);
 echo "Now i dont know - Finish";
 
-require 'index-faunctions.php';
+
 ?>
