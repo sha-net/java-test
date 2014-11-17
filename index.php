@@ -1,7 +1,7 @@
 <?php
 echo "version 0007";
 //include 'index-faunctions.php';
-header('Access-Control-Allow-Origin: *');
+//header('Access-Control-Allow-Origin: *');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";iDontKnow();}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
