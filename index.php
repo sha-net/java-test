@@ -1,7 +1,7 @@
 <?php
 echo "version 0007";
 //include 'index-faunctions.php';
-
+header('Access-Control-Allow-Origin: *');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";iDontKnow();}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
@@ -12,7 +12,7 @@ $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 $arr1 = "asfsdfasfadsfasfdasdfjfjfjjfjfjfjfjfjfjfjfjfjfjfjfjfjflsakjflakjflkadj";
 
 function iDontKnow(){
-header('Access-Control-Allow-Origin: *');
+
 echo "Now i dont know - Start";
 $request_body = file_get_contents('php://input');
 $json = json_decode($request_body);
