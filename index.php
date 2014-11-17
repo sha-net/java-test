@@ -3,7 +3,7 @@ echo "version 0007";
 //include 'index-faunctions.php';
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";iDontKnow();}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";response.addHeader("Access-Control-Allow-Origin", "*");iDontKnow();}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
 if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET"; verifyGetRequest();getFromDB();}
 if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}

@@ -16,7 +16,7 @@ function sendInformation(){
 	$.ajax({
             url: "http://sha-net.net/index.php",
             type: "POST",
-            dataType: "json",
+            dataType: "jsonp",
             data: person
         });
 }
