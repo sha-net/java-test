@@ -3,6 +3,11 @@ echo "version 0007";
 //include 'index-faunctions.php';
 //header('Access-Control-Allow-Origin: *');
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+header('Access-Control-Max-Age: 1000');
+header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";iDontKnow();}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
 if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET"; verifyGetRequest();getFromDB();}
