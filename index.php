@@ -1,5 +1,5 @@
 <?php
-echo "version 0005";
+echo "version 0006";
 //include 'index-faunctions.php';
 
 
@@ -12,12 +12,12 @@ $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 $arr1 = "asfsdfasfadsfasfdasdfjfjfjjfjfjfjfjfjfjfjfjfjfjfjfjfjflsakjflakjflkadj";
 
 function iDontKnow(){
-//echo "Now i dont know - Start";
+echo "Now i dont know - Start";
 $request_body = file_get_contents('php://input');
 $json = json_decode($request_body);
 print_r($json);
 //print_r($arr);
-//echo "Now i dont know - Finish";
+echo "Now i dont know - Finish";
 }
 
 function getFromDB(){
