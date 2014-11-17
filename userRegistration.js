@@ -6,14 +6,15 @@ $(document).ready(function(){
 	});
 	
 function sendInformation(){	
-	phoneNumber = $("#Phone").val();
+	userName = $("#userName").val();
+	familyName = $("#familyName").val();
 	var person = {
-		Phone: phoneNumber,
-		RegID: notificationEvent.regid
+		Phone: userName,
+		RegID: familyName
 	};
 	
 	$.ajax({
-            url: "http://sha-net.net/wines",
+            url: "http://sha-net.net/index.php",
             type: "POST",
             dataType: "json",
             data: person

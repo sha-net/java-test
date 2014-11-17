@@ -1,5 +1,5 @@
 <?php
-echo "version 0006";
+echo "version 0007";
 //include 'index-faunctions.php';
 
 
