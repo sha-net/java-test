@@ -8,7 +8,7 @@ header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Max-Age: 1000');
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');*/
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";iDontKnow();}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {echo "POST";iDontKnow();header('Location: http://sha-net.net/index.php?ID=3450');}
 if ($_SERVER["REQUEST_METHOD"] == "PUT") {echo "PUT";}
 if ($_SERVER["REQUEST_METHOD"] == "GET") {echo "GET"; verifyGetRequest();getFromDB();}
 if ($_SERVER["REQUEST_METHOD"] == "DELETE") {echo "DELETE";}
