@@ -22,6 +22,7 @@ echo "Now i dont know - Start";
 $request_body = file_get_contents('php://input');
 $json = json_decode($request_body);
 print_r($json);
+print_r($request_body);
 error_log($json . "test" . $request_body);
 //print_r($arr);
 echo "Now i dont know - Finish";
